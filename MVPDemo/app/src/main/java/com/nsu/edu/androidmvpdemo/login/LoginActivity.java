@@ -72,9 +72,8 @@ public class LoginActivity extends Activity implements LoginView, View.OnClickLi
 
     @Override
     public void navigateToHome() {
-// TODO       startActivity(new Intent(this, MainActivity.class));
+        // 登录成功，跳转到主界面
         Toast.makeText(this,"login success",Toast.LENGTH_SHORT).show();
-//        finish();
     }
 
     @Override

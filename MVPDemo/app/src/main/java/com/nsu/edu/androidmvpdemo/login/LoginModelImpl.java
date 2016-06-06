@@ -4,7 +4,7 @@ import android.os.Handler;
 import android.text.TextUtils;
 
 /**
- * Class Note:延时模拟登陆（2s），如果名字或者密码为空则登陆失败，否则登陆成功
+ * 延时模拟登陆（2s），如果名字或者密码为空则登陆失败，否则登陆成功
  */
 public class LoginModelImpl implements LoginModel {
 

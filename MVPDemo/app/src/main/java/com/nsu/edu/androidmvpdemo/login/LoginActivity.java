@@ -28,6 +28,7 @@ public class LoginActivity extends Activity implements LoginView, View.OnClickLi
     private EditText        username;
     private EditText        password;
 
+    // 逻辑处理
     private LoginPresenter  presenter;
 
     @Override
@@ -46,6 +47,7 @@ public class LoginActivity extends Activity implements LoginView, View.OnClickLi
 
     @Override
     protected void onDestroy() {
+        // 销毁当前View
         presenter.onDestroy();
         super.onDestroy();
     }
@@ -78,6 +80,7 @@ public class LoginActivity extends Activity implements LoginView, View.OnClickLi
 
     @Override
     public void onClick(View v) {
+        // 验证登录
         presenter.validateCredentials(username.getText().toString(), password.getText().toString());
     }
 

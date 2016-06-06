@@ -10,11 +10,12 @@ package com.nsu.edu.androidmvpdemo.login;
  * LoginPresenterImpl只 有View和Model的引用那么Model怎么把结果告诉View呢？
  */
 public class LoginPresenterImpl implements LoginPresenter, OnLoginFinishedListener {
-    private LoginView loginView;
-    private LoginModel loginModel;
+
+    private LoginView   loginView;
+    private LoginModel  loginModel;
 
     public LoginPresenterImpl(LoginView loginView) {
-        this.loginView = loginView;
+        this.loginView  = loginView;
         this.loginModel = new LoginModelImpl();
     }
 

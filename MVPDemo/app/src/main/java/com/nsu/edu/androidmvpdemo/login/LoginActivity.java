@@ -11,7 +11,6 @@ import android.widget.Toast;
 import com.nsu.edu.androidmvpdemo.R;
 
 /**
- * Created by Anthony on 2016/2/15.
  * Class Note:MVP模式中View层对应一个activity，这里是登陆的activity
  * demo的代码流程：Activity做了一些UI初始化的东西并需要实例化对应
  * LoginPresenter的引用和实现 LoginView的接口，监听界面动作，
@@ -25,10 +24,11 @@ import com.nsu.edu.androidmvpdemo.R;
  */
 public class LoginActivity extends Activity implements LoginView, View.OnClickListener {
 
-    private ProgressBar progressBar;
-    private EditText username;
-    private EditText password;
-    private LoginPresenter presenter;
+    private ProgressBar     progressBar;
+    private EditText        username;
+    private EditText        password;
+
+    private LoginPresenter  presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +36,9 @@ public class LoginActivity extends Activity implements LoginView, View.OnClickLi
         setContentView(R.layout.activity_login);
 
         progressBar = (ProgressBar) findViewById(R.id.progress);
-        username = (EditText) findViewById(R.id.username);
-        password = (EditText) findViewById(R.id.password);
+        username    = (EditText) findViewById(R.id.username);
+        password    = (EditText) findViewById(R.id.password);
+
         findViewById(R.id.button).setOnClickListener(this);
 
         presenter = new LoginPresenterImpl(this);
